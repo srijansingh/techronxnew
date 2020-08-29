@@ -18,7 +18,6 @@ export default function Footer() {
                     </div>
                     <div className="footer-nav">
                     <ActiveLink activeClassName="active" href="/"><a className="footer-navlink">Home</a></ActiveLink>
-                    <ActiveLink activeClassName="active" href="/blog"><a className="footer-navlink">Blog</a></ActiveLink>
                     <ActiveLink activeClassName="active" href="/about"><a className="footer-navlink">About</a></ActiveLink>
                     <ActiveLink activeClassName="active" href="/services"><a className="footer-navlink">Services</a></ActiveLink>
                     <ActiveLink activeClassName="active" href="/contact"><a className="footer-navlink">Contact</a></ActiveLink> 

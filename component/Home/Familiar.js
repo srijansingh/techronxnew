@@ -36,7 +36,7 @@ class Familiar extends Component{
 
             <style jsx>{`
              .border-top{
-                border-top: 20vh solid rgb(234, 247, 251);
+                border-top: 20vh solid #fff;
                 border-left: 100vw solid #000;
             }
         

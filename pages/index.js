@@ -1,3 +1,5 @@
+
+
 import Layout from "../component/Layout";
 import Head from 'next/head';
 import IntroPage from "../component/Home/Intro";
@@ -8,6 +10,7 @@ import fetch from "isomorphic-unfetch";
 import Video from "../component/Home/Video";
 import Portfolio from "../component/Home/Portfolio";
 
+import { baseUrl } from "../config/baseurl";
 
 function HomePage(props) {
 
@@ -17,9 +20,9 @@ function HomePage(props) {
     portfolio =  <Portfolio />
    
 
-    // const ourservice = props.data.data.map((service,index) => {
-    //    return <Ourservice  key={index} image={service.imageurl}  index={index}  description={service.content} heading={service.heading} id={service.id}/>
-    // })
+    const ourservice = props.data.data.map((service,index) => {
+       return <Ourservice  key={index} image={service.imageurl}  index={index}  description={service.content} heading={service.heading} id={service.serviceid}/>
+    })
 
 
 
@@ -29,30 +32,30 @@ function HomePage(props) {
             <Head>
                 <title>Techronx IT Solution and Services</title>
                 <meta name="viewport" content="width=device-width,minimum-scale=0.5,initial-scale=1"></meta>
+                <link rel="icon" href="/favicon.ico" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="theme-color" content="#000000" />
+                <link rel="apple-touch-icon" href="/logo192.png" /> 
+                <link rel="manifest" href="/manifest.json" />
             </Head>
             <div>
                 <IntroPage />
                 <Video />
-                {/* <div className="our-services-heading">
+                <div className="our-services-heading">
                   Our Services
             
                   <div className="span">
                     <span className="span-1"></span>
                     <span className="span-2"></span>
                  </div>
-               </div> */}
-                {/* {ourservice} */}
+               </div>
+                {ourservice}
 
                 {/* Portfolio Section */}
-                <div className="portfolio-border-top"></div>
+                {/* <div className="portfolio-border-top"></div>
                 <div className="main-container">
                     <div className="our-services-heading right">
                             Our Portfolio
-                        
-                            {/* <div className="span right">
-                                <span className="span-1"></span>
-                                <span className="span-2"></span>
-                            </div> */}
                     </div>
                 <div className="portfolio">
                     <div className="container">
@@ -66,7 +69,7 @@ function HomePage(props) {
                        {portfolio}
                     </div>
                 </div>
-                </div>
+                </div> */}
 
                 {/* Portfolio Section */}
 
@@ -84,6 +87,7 @@ function HomePage(props) {
           sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        overflow-x:hidden
       }
     `}</style>
 
@@ -116,7 +120,7 @@ function HomePage(props) {
     
         .portfolio-border{
             border-bottom: 20vh solid rgb(234, 247, 251);
-            border-right: 100vw solid #000;
+            border-right: 100vw solid #fff;
         }
 
        .our-services-heading{
@@ -163,12 +167,12 @@ function HomePage(props) {
     )
   }
 
-//   HomePage.getInitialProps = async function() {
-//     const res = await fetch('https://backend.techronx.com/api/service');
-//     const data = await res.json();
-//     return {
-//         data
-//     }
-// }
+  HomePage.getInitialProps = async function() {
+    const res = await fetch(`${baseUrl}/serviceintro`);
+    const data = await res.json();
+    return {
+        data
+    }
+}
   
 export default HomePage;

@@ -1,0 +1,99 @@
+.aboutus{
+    height:90vh;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    background:#000000;
+    color:white;
+}
+.border{
+    border-bottom: 20vh solid rgb(234, 247, 251);
+    border-right: 100vw solid black;
+}
+.introdescription{
+    height:90vh;
+    width:80%; 
+    padding:2rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+   
+}
+
+.introbio{
+    font-size: 1rem;
+    padding:1rem 0;
+    color: #666666;
+    max-width:500px;
+}
+
+.introhead{
+    font-size:2.5rem;
+    font-weight:bold;
+}
+
+.intrimage{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    align-items: center;
+  
+} 
+
+.intrimage img{
+    /* height:100%; */
+    max-width:500px;
+    width: 100%;
+   
+}
+
+.aboutus .button{
+    font-weight:bold;
+    width:200px;
+    padding:0.5rem 0;
+   cursor: pointer;
+
+}
+
+.button{
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+    width:180px;
+    padding:0.5rem 0;
+   cursor: pointer;
+   background:blue;
+   outline:none;
+   border:none;
+   color:white;
+
+}
+
+.button:hover{
+    background:darkblue;
+    transition:0.8s ease;
+}
+
+
+@media(max-width:800px){
+    .aboutus{
+        height:100%;
+        flex-wrap: wrap;
+    }
+    .introimage{
+        height:50vh;
+        /* width:100%; */
+    }
+    .intrimage img{
+        /* height:100%; */
+        max-width:360px;
+        width: 100%;
+       
+    }
+    .aboutus .intro-description{
+        height:100%;
+        width:100%;
+    }
+}

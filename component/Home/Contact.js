@@ -1,7 +1,47 @@
 import React, { Component } from 'react';
 import Head from "next/head";
-
+import { baseUrl } from '../../config/baseurl';
+import 'isomorphic-fetch';
 export default class Contact extends Component {
+    constructor (props) {
+        super(props);
+        this.state = {
+            name : '',
+            email :'',
+            phonenum :'',
+            occpation :'',
+            isLoading:false
+        }
+    }
+    
+
+    handleClick = (e) => {
+        e.preventDefault()
+        fetch('http://localhost:8082/user/customer', {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(this.state)
+        }).then(result => {
+            result.json().then(response => {
+                console.log(response)
+                this.setState({
+                    isLoading: false
+                });
+                alert('Message submitted')
+                window.location.reload(false)
+            })
+        }).catch(err => {
+            
+            this.setState({
+                isLoading: false,
+                error: err
+            });
+        });  
+    }
+
     render() {
         return (
             <div>
@@ -13,29 +53,29 @@ export default class Contact extends Component {
                 <div className="contact-box">
                     <div className="heading">Contact Us</div>
                     <div className="form-box">
-                    <form className="form">
+                    <form className="form" >
                         <div className="form-group">
                             <label for="name">Name</label>
-                            <input type="text" />
+                            <input type="text" onChange={()=> this.setState({name:event.target.value})} />
                         </div>
 
                         <div className="form-group">
                             <label for="email">Email</label>
-                            <input type="email" />
+                            <input type="email" onChange={()=> this.setState({email:event.target.value})}/>
                         </div>
 
                         <div className="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="number" />
+                            <input type="number" onChange={()=> this.setState({phonenum:event.target.value})} />
                         </div>
 
                         <div className="form-group">
                             <label for="message">Message</label>
-                            <input type="text" />
+                            <input type="text" onChange={()=> this.setState({occpation:event.target.value})} />
                         </div>
 
                         <div className="form-group button-group">
-                            <button type="submit">SEND MESSAGE</button>
+                            <button onClick={this.handleClick}>SEND MESSAGE</button>
                         </div>
                     </form>
                     </div>

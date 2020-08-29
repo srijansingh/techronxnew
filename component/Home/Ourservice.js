@@ -5,12 +5,14 @@ import Link from "next/link";
 
 
 class Ourservice extends Component {
+    
     render(){
         return(
             <div>
                  <Head>
-                <meta name="viewport" content="width=device-width,minimum-scale=0.5,initial-scale=1"></meta>
-              </Head>
+                    <meta name="viewport" content="width=device-width,minimum-scale=0.5,initial-scale=1"></meta>
+                </Head>
+                
                 <div className="our-service" >
                 
                     <section className={this.props.index % 2 === 0 ? 'left-align' : 'right-align'}>
@@ -26,12 +28,11 @@ class Ourservice extends Component {
                                     {this.props.description}
                                 </div>
                                 
-                                <Link  as={"/service/"+this.props.id} href={"/?service="+this.props.id} ><a  className="button">View Solution</a></Link>
+                                <Link  href={"/home?id="+this.props.id} ><a  className="button">View Solution</a></Link>
                             </div>
                         </div>
                     </section>
-                    {/* <div className={this.props.index % 2 === 0 ? 'border-top' : 'border'}></div> */}
-
+                    
                  </div> 
 
     <style jsx>{`
@@ -187,10 +188,10 @@ class Ourservice extends Component {
         align-items: center; 
      }
      .service-image img{
-         
+         max-width:300px;
          
          /* background:black; */
-         height:450px;
+         
      }
      
      @media(max-width:800px){

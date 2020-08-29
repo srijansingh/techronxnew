@@ -15,7 +15,6 @@ function Navbar(){
 
            <div className="nav-tool">
              <ActiveLink activeClassName="active" href="/"><a>Home</a></ActiveLink>
-             <ActiveLink activeClassName="active" href="/blog"><a>Blog</a></ActiveLink>
              <ActiveLink activeClassName="active" href="/about"><a>About</a></ActiveLink>
              <ActiveLink activeClassName="active" href="/services"><a>Services</a></ActiveLink>
              <ActiveLink activeClassName="active" href="/contact"><a>Contact</a></ActiveLink> 
