@@ -21,26 +21,26 @@ const Service = withRouter((props)=> {
      const content = props.data.intro.data[0].content;
      const serviceid = props.data.intro.data[0].serviceid;
 
-     const url = "https://techronx.com/"+serviceid
+     const url = "https://techronx.com/home?id="+serviceid
     return (
        
 
       <Layout>
           <Head>
 
-                <meta name="title" content={title} />
+                <meta name="title" content={heading} />
                 <meta name="description" content={content} />
 
                
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={url} />
-                <meta property="og:title" content={title} />
+                <meta property="og:title" content={heading} />
                 <meta property="og:description" content={content} />
                 <meta property="og:image" content={imageurl} />
 
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content={url} />
-                <meta property="twitter:title" content={title} />
+                <meta property="twitter:title" content={heading} />
                 <meta property="twitter:description" content={content} />
                 <meta property="twitter:image" content={imageurl} />
 
