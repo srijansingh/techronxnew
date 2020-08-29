@@ -1,1 +1,1 @@
-export const baseUrl = 'http://localhost:8082/user/';
+export const baseUrl = 'https://api.techronx.com/user/';

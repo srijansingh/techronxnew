@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport Layout from \"../component/Layout\";\nimport Head from 'next/head';\nexport default function blog() {\n  return __jsx(Layout, null, __jsx(Head, null, __jsx(\"title\", null, \"Techronx | Blog\")), __jsx(\"div\", null, \"Blog\"));\n}","map":null,"metadata":{},"sourceType":"module"}

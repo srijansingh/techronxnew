@@ -1,9 +1,14 @@
 {
+  "/about": "pages/about.html",
+  "/blog": "pages/blog.html",
+  "/contact": "pages/contact.html",
+  "/home": "pages/home.js",
+  "/": "pages/index.js",
+  "/privacypolicy": "pages/privacypolicy.html",
+  "/services": "pages/services.html",
+  "/tandc": "pages/tandc.html",
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/contact": "pages/contact.js",
-  "/services": "pages/services.js",
-  "/about": "pages/about.js"
+  "/404": "pages/404.html"
 }

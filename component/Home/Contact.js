@@ -17,7 +17,7 @@ export default class Contact extends Component {
 
     handleClick = (e) => {
         e.preventDefault()
-        fetch('http://localhost:8082/user/customer', {
+        fetch('https://api.techronx.com/user/customer', {
             method: "POST",
             headers: {
                 "Accept": "application/json",

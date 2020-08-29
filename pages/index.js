@@ -30,13 +30,24 @@ function HomePage(props) {
     return (
         <Layout>
             <Head>
+          
                 <title>Techronx IT Solution and Services</title>
-                <meta name="viewport" content="width=device-width,minimum-scale=0.5,initial-scale=1"></meta>
-                <link rel="icon" href="/favicon.ico" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="theme-color" content="#000000" />
-                <link rel="apple-touch-icon" href="/logo192.png" /> 
-                <link rel="manifest" href="/manifest.json" />
+                <meta name="title" content="Techronx IT Solution and Services" />
+                <meta name="description" content="Techronx is a team with highly experienced backgrounds in web and mobile application development, graphic designing, digital marketing and many more. " />
+
+               
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://techronx.com/" />
+                <meta property="og:title" content="Techronx IT Solution and Services" />
+                <meta property="og:description" content="Techronx is a team with highly experienced backgrounds in web and mobile application development, graphic designing, digital marketing and many more. " />
+                <meta property="og:image" content="/logo.png" />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://techronx.com/" />
+                <meta property="twitter:title" content="Techronx IT Solution and Services" />
+                <meta property="twitter:description" content="Techronx is a team with highly experienced backgrounds in web and mobile application development, graphic designing, digital marketing and many more. " />
+                <meta property="twitter:image" content="/logo.png" />
+
             </Head>
             <div>
                 <IntroPage />

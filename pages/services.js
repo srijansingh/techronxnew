@@ -9,7 +9,22 @@ export default function services() {
     return (
         <Layout>
              <Head>
-                <title>Techronx | Services</title>
+             <title>Techronx Services</title>
+                <meta name="title" content="Techronx Services" />
+                <meta name="description" content="Techronx is a team with highly experienced backgrounds in web and mobile application development, graphic designing, digital marketing and many more. " />
+
+               
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://techronx.com/services" />
+                <meta property="og:title" content="Techronx Services" />
+                <meta property="og:description" content="Techronx is a team with highly experienced backgrounds in web and mobile application development, graphic designing, digital marketing and many more. " />
+                <meta property="og:image" content="/logo.png" />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://techronx.com/services" />
+                <meta property="twitter:title" content="Techronx Services" />
+                <meta property="twitter:description" content="Techronx is a team with highly experienced backgrounds in web and mobile application development, graphic designing, digital marketing and many more. " />
+                <meta property="twitter:image" content="/logo.png" />
             </Head>
         <div>
             <Landing />

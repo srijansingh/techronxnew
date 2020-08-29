@@ -8,7 +8,25 @@ export default function about() {
     return (
         <Layout>
             <Head>
-                <title>Techronx |  About</title>
+            <title>About Techronx</title>
+                <meta name="title" content="About Techronx" />
+                <meta name="description" content="It’s TechronX team, we want to share our story with you. Our company was founded with a mission to help businesses
+                        achieve their goals with IT solutions and solve market problems." />
+
+               
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://techronx.com/about" />
+                <meta property="og:title" content="About Techronx" />
+                <meta property="og:description" content="It’s TechronX team, we want to share our story with you. Our company was founded with a mission to help businesses
+                        achieve their goals with IT solutions and solve market problems." />
+                <meta property="og:image" content="/logo.png" />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://techronx.com/about" />
+                <meta property="twitter:title" content="About Techronx" />
+                <meta property="twitter:description" content="It’s TechronX team, we want to share our story with you. Our company was founded with a mission to help businesses
+                        achieve their goals with IT solutions and solve market problems." />
+                <meta property="twitter:image" content="/logo.png" />
             </Head>
         <div>
            <Landing />
