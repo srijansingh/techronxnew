@@ -55,22 +55,22 @@ export default class Contact extends Component {
                     <div className="form-box">
                     <form className="form" >
                         <div className="form-group">
-                            <label for="name">Name</label>
+                            <label htmlFor="name">Name</label>
                             <input type="text" onChange={()=> this.setState({name:event.target.value})} />
                         </div>
 
                         <div className="form-group">
-                            <label for="email">Email</label>
+                            <label htmlFor="email">Email</label>
                             <input type="email" onChange={()=> this.setState({email:event.target.value})}/>
                         </div>
 
                         <div className="form-group">
-                            <label for="phone">Phone Number</label>
+                            <label htmlFor="phone">Phone Number</label>
                             <input type="number" onChange={()=> this.setState({phonenum:event.target.value})} />
                         </div>
 
                         <div className="form-group">
-                            <label for="message">Message</label>
+                            <label htmlFor="message">Message</label>
                             <input type="text" onChange={()=> this.setState({occpation:event.target.value})} />
                         </div>
 
