@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -152,6 +152,14 @@ const baseUrl = 'https://api.techronx.com/user/';
 
 /***/ }),
 
+/***/ 2:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("CH2o");
+
+
+/***/ }),
+
 /***/ "3WeD":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -197,14 +205,6 @@ function assign(target, ...searchParamsList) {
   });
   return target;
 }
-
-/***/ }),
-
-/***/ 4:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("CH2o");
-
 
 /***/ }),
 
@@ -2261,6 +2261,25 @@ function Landing(props) {
   }), Layout_jsx("meta", {
     name: "theme-color",
     content: "#000000",
+    className: "jsx-896731212"
+  }), Layout_jsx("script", {
+    async: true,
+    src: "https://www.googletagmanager.com/gtag/js?id=UA-176938786-1",
+    className: "jsx-896731212"
+  }), Layout_jsx("script", {
+    dangerouslySetInnerHTML: {
+      __html: `
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176938786-1"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-176938786-1');
+            </script>
+
+              `
+    },
     className: "jsx-896731212"
   })), Layout_jsx("div", {
     className: "jsx-896731212" + " " + "container"
