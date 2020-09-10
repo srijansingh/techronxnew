@@ -11,6 +11,7 @@ import Video from "../component/Home/Video";
 import Portfolio from "../component/Home/Portfolio";
 
 import { baseUrl } from "../config/baseurl";
+import TransitionsModal from "../component/tools/Modal";
 
 function HomePage(props) {
 
@@ -50,6 +51,7 @@ function HomePage(props) {
 
             </Head>
             <div>
+               
                 <IntroPage />
                 <Video />
                 <div className="our-services-heading">
@@ -87,10 +89,14 @@ function HomePage(props) {
                 
                 <Familiar />
                 <Contact />
+               
             </div>
 
 
     <style jsx global>{`
+    ::-webkit-scrollbar {
+        display: none;
+    }
        body {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

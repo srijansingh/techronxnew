@@ -25,7 +25,7 @@ function Landing(props){
             <meta name="theme-color" content="#000000" />
 
 
-            <script
+            {/* <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=UA-176938786-1"
         ></script>
@@ -44,7 +44,7 @@ function Landing(props){
               `,
           }}
         />
-            
+             */}
             
         </Head>
         <div className="container">

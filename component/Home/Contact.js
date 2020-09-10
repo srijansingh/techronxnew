@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Head from "next/head";
 import { baseUrl } from '../../config/baseurl';
 import 'isomorphic-fetch';
+import TransitionsModal from '../tools/Modal';
 export default class Contact extends Component {
     constructor (props) {
         super(props);
@@ -10,11 +11,16 @@ export default class Contact extends Component {
             email :'',
             phonenum :'',
             occpation :'',
-            isLoading:false
+            isLoading:false,
+            isOpen:false
         }
     }
     
+    handleClick = () => {
+       
 
+       
+    }
     handleClick = (e) => {
         e.preventDefault()
         fetch('https://api.techronx.com/user/customer', {
@@ -27,11 +33,18 @@ export default class Contact extends Component {
         }).then(result => {
             result.json().then(response => {
                 console.log(response)
+
                 this.setState({
-                    isLoading: false
-                });
-                alert('Message submitted')
-                window.location.reload(false)
+                    isOpen:true
+                })
+
+                setTimeout(() => {
+                    this.setState({
+                        isOpen:false
+                    })
+                    window.location.reload(false)
+                   }, 3000);
+               
             })
         }).catch(err => {
             
@@ -48,7 +61,7 @@ export default class Contact extends Component {
               <Head>
                 <meta name="viewport" content="width=device-width,minimum-scale=0.5,initial-scale=1"></meta>
               </Head>
-              
+             
               <div className="contact">
                 <div className="contact-box">
                     <div className="heading">Contact Us</div>
@@ -75,13 +88,24 @@ export default class Contact extends Component {
                         </div>
 
                         <div className="form-group button-group">
-                            <button onClick={this.handleClick}>SEND MESSAGE</button>
+                            {
+                                this.state.name !== '' && this.state.email !== '' ? 
+                                <div className="button" onClick={this.handleClick}>SEND MESSAGE</div>
+                                :
+                                <div className="button2">SEND MESSAGE</div>
+                            }
                         </div>
                     </form>
                     </div>
                 </div>
               </div>
-           
+              <TransitionsModal isOpen={this.state.isOpen}>
+                 <div style={{display:'flex', flexDirection:'column', width:'100%',height:'300px',justifyContent:'space-around', alignItems:'center'}}>
+                    <img src="/images/15.gif" width="300px" alt="Digital Marketing Techronx" />
+                    <span style={{color:'#d4d4d4'}}>Message Sent!</span>
+                    <span style={{color:'green', fontWeight:'bold'}}>Thank you</span>
+                 </div>
+              </TransitionsModal>
         <style jsx>{`
             .contact{
                 height:90vh;
@@ -168,7 +192,7 @@ export default class Contact extends Component {
                 display:flex;
                 align-items:center;
             }
-            button{
+            .button{
                text-align:center;
                 width:200px;
                 color:black;
@@ -180,7 +204,18 @@ export default class Contact extends Component {
                 cursor:pointer;
               
             }
-            button:hover{
+
+            .button2{
+                text-align:center;
+                 width:200px;
+                 color:black;
+                 border:2px solid black;
+                 background:#f2f2f2;
+                 padding:1rem;
+                 outline:none;
+               
+             }
+            .button:hover{
                 border-color:none;
                 background:linear-gradient(to left, blue, purple);
                 transition-duration:.3s;

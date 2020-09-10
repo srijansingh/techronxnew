@@ -1,11 +1,16 @@
 import React, {Component} from "react";
-import styles from "./css/intro.module.css";
-
+import IntroComponent from "../tools/IntroComponent"
 class Landing extends Component {
     render(){
         return(
             <>
-            <div className={styles.aboutus}>
+            <IntroComponent
+                heading='TechronX - IT Services'
+                title='From start to finish, we offer excellent product solutions.'
+                imageUrl='/service/services8.png'
+                alt="service techronx"
+            />
+            {/* <div className={styles.aboutus}>
                 <div className={styles.introdescription}>
                     <div className={styles.introhead}>
                     TechronX - IT Services
@@ -18,7 +23,7 @@ class Landing extends Component {
                     <img src="/service/services8.png" alt="service techronx" />
                 </div>
             </div>
-            <div className={styles.border}></div>
+            <div className={styles.border}></div> */}
             </>
         )
     }

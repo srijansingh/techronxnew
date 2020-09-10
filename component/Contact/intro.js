@@ -1,25 +1,19 @@
 import React, {Component} from "react";
 import styles from "./css/intro.module.css";
+import IntroComponent from "../tools/IntroComponent"
 
 class Landing extends Component {
     render(){
         return(
-            <>
-            <div className={styles.aboutus}>
-                <div className={styles.introdescription}>
-                    <div className={styles.introhead}>
-                        Contact
-                        <div className={styles.introbio}>
-                        Get you business skyroket today.
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.introimage}>
-                    <img src="/images/aboutus.png" alt="techronx" />
-                </div>
-            </div>
-            <div className={styles.border}></div>
-            </>
+           
+            <IntroComponent 
+                heading="Contact Us"
+                title="Contact us today to get your business skyroket today."
+                imageUrl="/images/aboutus.png"
+                alt="Contact Techronx"
+            />
+    
+          
         )
     }
 }

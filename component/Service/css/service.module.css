@@ -137,10 +137,10 @@
 
 .workserviceimage img{
     
-    max-width: 360px;
+    max-width: 500px;
     width:100%;
     /* background:black; */
-    max-height:350px;
+    max-height:500px;
     height:100%;
 }
 

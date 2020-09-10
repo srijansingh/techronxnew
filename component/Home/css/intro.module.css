@@ -76,8 +76,56 @@
     transition:0.8s ease;
 }
 
+.modal{
+    display:flex; 
+    flex-direction:column;
+   
+    width:500px;
+    min-height:220px;
+    justify-content:space-around;
+    align-items:center;
+    text-align:center;
+    padding:1.5rem 0
+}
+
+.modal img{
+   
+    border-radius: 10px;
+}
+.close{
+   
+    position:absolute;
+    
+}
+.followTitle{
+    font-size:25px;
+    font-weight:bold
+}
+
+.followLink{
+    text-decoration: none;
+    width:75%;
+    background: blue;
+    border:'none';
+    outline:'none';
+    padding:8px 0;
+    border-radius:5px;
+    font-size:18px;
+    color:white
+}
 
 @media(max-width:800px){
+    .modal{
+       
+        width:100%;
+        
+        padding:0.8rem 0
+    }
+    .followLink{
+       
+        width:90%;
+        
+    }
     .aboutus{
         height:100%;
         flex-wrap: wrap;

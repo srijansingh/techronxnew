@@ -1,17 +1,44 @@
 import React,{Component} from 'react';
 import Head from "next/head";
-
+import { CardMedia, Typography } from '@material-ui/core';
+import { IconButton } from '@material-ui/core';
+import CloseIcon from '@material-ui/icons/Close';
+import TransitionsModal from '../tools/Modal';
 class Video extends Component{
+    constructor (props) {
+        super(props);
+        this.state = {
+            isOpen:false
+        }
+    }
+
+    onPlay = () => {
+        this.setState({
+            isOpen:!this.state.isOpen
+        })
+    }
     render(){
         return(
             <div>
               <Head>
                 <meta name="viewport" content="width=device-width,minimum-scale=0.5,initial-scale=1"></meta>
               </Head>
-              {/* <div className="border-top"></div> */}
+              <TransitionsModal isOpen={this.state.isOpen}>
+                  <div >
+                      <IconButton size="small" onClick={this.onPlay}>
+                          <CloseIcon />
+                      </IconButton>
+                  </div>
+                  <video autoplay="true"  style={{outline:'none'}} width="100%" height="100%" controls>
+                    <source src="/service/video.mp4" type="video/mp4" autoplay/>
+                    </video>
+                    <div >
+                  </div>
+                 
+              </TransitionsModal>
             <div className="familiar">
-                <div className="familiar-image">
-                    <img src="/images/familiar.png" alt="Let's get acquanted" />
+                <div className="familiar-image" title="Tap to play" onClick={this.onPlay}>
+                    <img src="/images/play.png" alt="Let's get acquanted" />
                 </div>
                 <div className="familiar-intro">
                     <div className="familiar-box">
@@ -25,9 +52,6 @@ class Video extends Component{
                             If you would like to learn more about our team, cozy office and 
                             workflow, just follow the link below.
                         </div>
-                        {/* <button  className="button" variant="contained" color="primary" href="/contact" >
-                            Contact Us
-                        </button> */}
                     </div>
                 </div>
                
@@ -88,7 +112,7 @@ class Video extends Component{
                 transition:0.8s ease;
             }
             .familiar-head{
-                font-size:2rem;
+                font-size:2.1rem;
                 margin-bottom:1rem;
             }
             .familiar-bio{
@@ -107,10 +131,28 @@ class Video extends Component{
             }
             .familiar-image img{
                 width:100%;
-                height:100%;
+                // height:100%;
                 display:flex;
                 flex-direction: column;
                 justify-content: space-between;
+                animation-name:image;
+                animation-duration:3s;
+                animation-iteration-count:infinite
+            }
+
+            @keyframes image{
+                0%{
+                    transform:scale(0.9)
+                }
+                70%{
+              
+                    transform:scale(1)
+             
+                }
+
+                100%{
+                    transform:scale(0.9)
+                }
             }
 
 
