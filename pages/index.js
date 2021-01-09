@@ -181,15 +181,19 @@ function HomePage(props) {
     }
     `}</style>
         </Layout>
-    )
+    )}
+
+    HomePage.getInitialProps = async function() {
+        const res = await fetch(`${baseUrl}/serviceintro`);
+        const data = await res.json();
+        return {
+            data
+        }
+
+    
   }
 
-  HomePage.getInitialProps = async function() {
-    const res = await fetch(`${baseUrl}/serviceintro`);
-    const data = await res.json();
-    return {
-        data
-    }
-}
+  
+  
   
 export default HomePage;

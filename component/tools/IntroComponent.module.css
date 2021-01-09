@@ -12,7 +12,7 @@
 }
 .introdescription{
     height:70vh;
-    width:80%; 
+    width:100%; 
     padding:2rem;
     display:flex;
     flex-direction: column;
@@ -42,7 +42,7 @@
 
 .introimage img{
     max-width:500px;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .aboutus .button{
@@ -62,7 +62,7 @@
     .introimage img{
         /* height:100%; */
         max-width:360px;
-        width: 100%;
+        /* width: 100%; */
        
     }
     .aboutus .intro-description{

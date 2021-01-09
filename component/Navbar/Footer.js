@@ -21,6 +21,7 @@ export default function Footer() {
                     <ActiveLink activeClassName="active" href="/about"><a className="footer-navlink">About</a></ActiveLink>
                     <ActiveLink activeClassName="active" href="/services"><a className="footer-navlink">Services</a></ActiveLink>
                     <ActiveLink activeClassName="active" href="/contact"><a className="footer-navlink">Contact</a></ActiveLink> 
+                    <ActiveLink activeClassName="active" href="/carrer"><a className="footer-navlink">Carrer</a></ActiveLink> 
                     </div>
                     <div className="footer-community">
                         <div className="comm-head">Join the Community</div>
